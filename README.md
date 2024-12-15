@@ -36,7 +36,7 @@ A comprehensive Python package for processing and analyzing 3D point cloud data.
 > Some example plots from the runs: 
 > - Solution aligned point cloud with Poisson Reconstruction
 > ![poisson_aligned_point_cloud](assets/poisson_aligned_point_cloud.png)
-> ![poisson_surfacce_reconstruction](assets/poisson_aligned_point_cloud.png)
+> ![poisson_surfacce_reconstruction](assets/poisson_surface_reconstruction.png)
 > - Solution aligned point cloud with Gaussion Splatting
 > ![gaussian_splatting_point_cloud](assets/gaussian_splat_aligned_point_cloud.png)
 
