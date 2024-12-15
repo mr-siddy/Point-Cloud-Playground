@@ -36,16 +36,23 @@ A comprehensive Python package for processing and analyzing 3D point cloud data.
 > Some example plots from the runs: 
 > - Solution aligned point cloud with Poisson Reconstruction
 > ![poisson_aligned_point_cloud](assets/poisson_aligned_point_cloud.png)
-> ![poisson_surfacce_reconstruction](assets/poisson_aligned_point_cloud.png)
+> ![poisson_surfacce_reconstruction](assets/poisson_surface_reconstruction.png)
 > - Solution aligned point cloud with Gaussion Splatting
 > ![gaussian_splatting_point_cloud](assets/gaussian_splat_aligned_point_cloud.png)
+> ![gaussian_splatting_pc_2](assets/gaussian_splattig_point_cloud_original.png)
+> - Gaussian Splatting Optimization Curve
+> ![optimization_curve_gs](assets/optimization_loss.png)
+> - Gaussian Splatting w/ Ultralow params
+> ![ultra_low_params](assets/gaussian_splatting_ultra_low_param.png)
 
 ### Testing Framework
 - Automated transformation tests
 - Surface reconstruction validation
 - Quality metrics computation
 
-> Test Logs can be viewed in this file: [Logs](assets/test_logs.txt)
+> Training Logs can be viewed in this file: [Logs](assets/test_logs.txt)
+> Gaussian Splatting Training Logs caan be found here: [GS_Logs](assets/gs_test_logs.txt) 
+
 ## Example Google Colab :)
 I made a [google colab](https://colab.research.google.com/drive/1E6Fh1jOXh8IBQiFC1ZKXHdT8ap4obV5l?usp=sharing) for some example run
 
@@ -117,11 +124,29 @@ visualizer.plot_mesh(mesh)
 2. Gaussian Splatting:
 ```python
 # Reconstruct using Gaussian Splatting
-mesh = processor.reconstruct_surface(
-    method='gaussian',
-    num_gaussians=1000,    # Number of Gaussian primitives
-    num_iterations=100,    # Optimization iterations
-    learning_rate=0.01     # Learning rate
+# For more detail but slower processing:
+mesh, params, losses = reconstruct_surface_gaussian(
+    aligned_pcd,
+    num_gaussians=3000,        # More Gaussians
+    learning_rate=0.005,       # Lower learning rate for stability
+    num_iterations=300,        # More iterations
+    overlap_factor=2.0         # More overlap for smoothness
+)
+# For faster processing but less detail:
+mesh, params, losses = reconstruct_surface_gaussian(
+    aligned_pcd,
+    num_gaussians=1000,        # Fewer Gaussians
+    learning_rate=0.01,        # Standard learning rate
+    num_iterations=100,        # Fewer iterations
+    overlap_factor=1.2         # Less overlap
+)
+# Ultra-light parameters
+mesh, params, losses = reconstruct_surface_gaussian(
+    aligned_pcd,
+    num_gaussians=250,         # Further reduced
+    learning_rate=0.01,
+    num_iterations=30,         # Minimum iterations
+    overlap_factor=1.0         # Minimum overlap
 )
 
 # Save results
