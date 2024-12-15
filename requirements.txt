@@ -1,0 +1,5 @@
+open3d>=0.16.0
+numpy>=1.21.0
+torch>=1.9.0
+plotly>=5.3.0
+matplotlib>=3.4.0

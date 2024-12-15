@@ -1,0 +1,120 @@
+Initialized PointCloudProcessor with 184803 points
+
+Step 1: Detecting and reorienting floor...
+Starting floor detection...
+Found floor plane with 92023 inlier points
+Floor alignment completed successfully
+
+Step 2: Performing surface reconstruction...
+Starting surface reconstruction using poisson method...
+Estimating normals...
+Performing Poisson surface reconstruction...
+Post-processing mesh...
+
+Step 3: Running unit tests...
+
+Running 5 unit tests...
+
+Test 1/5
+Applied transformations:
+- Rotation: angle=0.04, axis=[0.44221815 0.31086312 0.8413128 ]
+- Translation: [8.29325215 5.65218532 0.59690462]
+- Scale: 0.8451587533115755
+Initialized PointCloudProcessor with 184803 points
+Starting floor detection...
+Found floor plane with 96282 inlier points
+Floor alignment completed successfully
+
+Test 1 Results:
+- Height deviation from Y=0: 0.0032 (threshold: 0.05)
+- Normal alignment with Y-axis: 1.0000 (threshold: 0.95)
+- Overall result: Success
+
+Test 2/5
+Applied transformations:
+- Rotation: angle=1.66, axis=[0.78974143 0.20948094 0.57656415]
+- Translation: [3.16158254 1.76469332 5.67858459]
+- Scale: 0.8762182224238675
+Initialized PointCloudProcessor with 184803 points
+Starting floor detection...
+Found floor plane with 95737 inlier points
+Floor alignment completed successfully
+
+Test 2 Results:
+- Height deviation from Y=0: 0.0032 (threshold: 0.05)
+- Normal alignment with Y-axis: 1.0000 (threshold: 0.95)
+- Overall result: Success
+
+Test 3/5
+Applied transformations:
+- Rotation: angle=0.01, axis=[0.01675077 0.78623065 0.61770606]
+- Translation: [9.2330193  8.171907   2.80549359]
+- Scale: 0.6616958355419607
+Initialized PointCloudProcessor with 184803 points
+Starting floor detection...
+Found floor plane with 100725 inlier points
+Floor alignment completed successfully
+
+Test 3 Results:
+- Height deviation from Y=0: 0.0028 (threshold: 0.05)
+- Normal alignment with Y-axis: 1.0000 (threshold: 0.95)
+- Overall result: Success
+
+Test 4/5
+Applied transformations:
+- Rotation: angle=0.03, axis=[0.08816809 0.99598271 0.01564694]
+- Translation: [0.98844809 6.95788853 9.95622955]
+- Scale: 0.5217065810617418
+Initialized PointCloudProcessor with 184803 points
+Starting floor detection...
+Found floor plane with 103449 inlier points
+Floor alignment completed successfully
+
+Test 4 Results:
+- Height deviation from Y=0: 0.0023 (threshold: 0.05)
+- Normal alignment with Y-axis: 1.0000 (threshold: 0.95)
+- Overall result: Success
+
+Test 5/5
+Applied transformations:
+- Rotation: angle=1.44, axis=[0.96710434 0.09326158 0.23666742]
+- Translation: [4.68334923 0.70132521 0.72213576]
+- Scale: 1.562553530461869
+Initialized PointCloudProcessor with 184803 points
+Starting floor detection...
+Found floor plane with 77575 inlier points
+Floor alignment completed successfully
+
+Test 5 Results:
+- Height deviation from Y=0: 0.0042 (threshold: 0.05)
+- Normal alignment with Y-axis: 1.0000 (threshold: 0.95)
+- Overall result: Success
+
+Test Summary:
+Total tests: 5
+Successful: 5
+Failed: 0
+
+Detailed Test Results:
+Test 1:
+- Height deviation: 0.0032
+- Normal alignment: 1.0000
+- Result: Success
+Test 2:
+- Height deviation: 0.0032
+- Normal alignment: 1.0000
+- Result: Success
+Test 3:
+- Height deviation: 0.0028
+- Normal alignment: 1.0000
+- Result: Success
+Test 4:
+- Height deviation: 0.0023
+- Normal alignment: 1.0000
+- Result: Success
+Test 5:
+- Height deviation: 0.0042
+- Normal alignment: 1.0000
+- Result: Success
+
+Step 4: Saving results...
